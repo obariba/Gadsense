@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gadsense</string>
+    <string name="action_settings">設定</string>
+    <string name="tab1">今日</string>
+    <string name="tab2">昨日</string>
+    <string name="tab3">今月</string>
+    <string name="earnings">収益額</string>
+    <string name="page_views">ページビュー</string>
+    <string name="impressions">表示回数</string>
+    <string name="clicks">クリック数</string>
+    <string name="page_ctr">ページCTR</string>
+    <string name="cpc">クリック単価</string>
+    <string name="impression_rpm">インプレッション収益</string>
+    <string name="page_rpm">ページRPM</string>
+    <string name="impression_ctr">クリック率</string>
+    <string name="currency">¥</string>
+    <string name="today">今日</string>
+</resources>
