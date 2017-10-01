@@ -2,9 +2,6 @@
 <resources>
     <string name="app_name">Gadsense</string>
     <string name="action_settings">設定</string>
-    <string name="tab1">今日</string>
-    <string name="tab2">昨日</string>
-    <string name="tab3">今月</string>
     <string name="earnings">収益額</string>
     <string name="page_views">ページビュー</string>
     <string name="impressions">表示回数</string>
@@ -16,4 +13,8 @@
     <string name="impression_ctr">クリック率</string>
     <string name="currency">¥</string>
     <string name="today">今日</string>
+    <string name="title_section1">今日</string>
+    <string name="title_section2">昨日</string>
+    <string name="title_section3">今月</string>
+    <string name="title_section4">先月</string>
 </resources>

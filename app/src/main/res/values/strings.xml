@@ -2,7 +2,7 @@
     <string name="app_name">Gadsense</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
-        <string name="earnings">Earnings</string>
+    <string name="earnings">Earnings</string>
     <string name="page_views">Page View</string>
     <string name="impressions">Impressions</string>
     <string name="clicks">Clicks</string>
@@ -11,9 +11,11 @@
     <string name="cpc">CPC</string>
     <string name="page_rpm">Page RPM</string>
     <string name="impression_rpm">Impression RPM</string>
-    <string name="tab1">Today</string>
-    <string name="tab2">Yesterday</string>
-    <string name="tab3">This Month</string>
     <string name="currency">$</string>
     <string name="today">today</string>
+    <string name="title_section1">today</string>
+    <string name="title_section2">yesterday</string>
+    <string name="title_section3">this month</string>
+    <string name="title_section4">last month</string>
+
 </resources>

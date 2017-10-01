@@ -57,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="000000"
+            android:text="000002"
             android:gravity="right"
             android:textSize="30sp" />
     </LinearLayout>
@@ -88,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:gravity="right"
-            android:text="000000"
+            android:text="000002"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -117,7 +117,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="000000"
+            android:text="000002"
             android:gravity="right"
             android:textSize="30sp" />
     </LinearLayout>
@@ -143,11 +143,11 @@
 
 
         <TextView
-            android:id="@+id/clicks"
+            android:id="@+id/clicks1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="000000"
+            android:text="000002"
             android:gravity="right"
             android:textSize="30sp" />
     </LinearLayout>
