@@ -5,31 +5,12 @@
     android:padding="26dp"
     tools:context="com.obarbo.gadsense.MainActivity$PlaceholderFragment">
 
-    <LinearLayout
-        android:id="@+id/linearlayout0"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:background="@drawable/underline"
-        android:orientation="horizontal"
-        android:padding="5dp">
-
-
-        <TextView
-            android:id="@+id/section_label"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textSize="18sp"/>
-    </LinearLayout>
-
-
 
     <LinearLayout
         android:id="@+id/linearlayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:layout_below="@id/linearlayout0"
         android:background="@drawable/underline"
         android:orientation="horizontal"
         android:padding="5dp">
