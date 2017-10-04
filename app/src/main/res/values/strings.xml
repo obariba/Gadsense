@@ -17,5 +17,6 @@
     <string name="title_section2">yesterday</string>
     <string name="title_section3">this month</string>
     <string name="title_section4">last month</string>
+    <string name="show_countries">Show Countries</string>
 
 </resources>
