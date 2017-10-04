@@ -264,12 +264,177 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearlayout9"
+        android:id="@+id/linearlayout9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearlayout8"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/underline"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/impression_rpm"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/impression_rpm"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/impression_rpm1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="000001"
+            android:gravity="right"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/linearlayout8"
+            android:layout_below="@+id/linearlayout9"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/underline"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/impression_rpm"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/impression_rpm"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/impression_rpm1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="000001"
+                android:gravity="right"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/linearlayout10"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/underline"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/impression_rpm"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/impression_rpm"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/impression_rpm1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="000001"
+                android:gravity="right"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/linearlayout11"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/underline"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/impression_rpm"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/impression_rpm"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/impression_rpm1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="000001"
+                android:gravity="right"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/linearlayout12"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/underline"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/impression_rpm"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/impression_rpm"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/impression_rpm1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="000001"
+                android:gravity="right"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/linearlayout13"
             android:layout_marginBottom="40dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/underline"
