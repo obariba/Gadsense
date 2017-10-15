@@ -3,7 +3,7 @@
     <!-- 枠線付き長方形 -->
     <item>
         <shape android:shape="rectangle">
-            <stroke android:width="2dp" android:color="#cccccc" />
+            <stroke android:width="2dp" android:color="#dddddd" />
         </shape>
     </item>
 

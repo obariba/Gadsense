@@ -17,10 +17,10 @@
             android:id="@+id/linearlayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="2dp"
             android:background="@drawable/underline"
             android:orientation="horizontal"
-            android:padding="5dp">
+            android:padding="2dp">
 
             <TextView
                 android:id="@+id/earnings"
@@ -55,10 +55,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/linearlayout1"
-            android:layout_margin="5dp"
+            android:layout_margin="2dp"
             android:background="@drawable/underline"
             android:orientation="horizontal"
-            android:padding="5dp">
+            android:padding="2dp">
 
             <TextView
                 android:id="@+id/pageviews"
@@ -85,10 +85,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/linearlayout2"
-            android:layout_margin="5dp"
+            android:layout_margin="2dp"
             android:background="@drawable/underline"
             android:orientation="horizontal"
-            android:padding="5dp">
+            android:padding="2dp">
 
             <TextView
                 android:id="@+id/impressions"
@@ -115,10 +115,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/linearlayout3"
-            android:layout_margin="5dp"
+            android:layout_margin="2dp"
             android:background="@drawable/underline"
             android:orientation="horizontal"
-            android:padding="5dp">
+            android:padding="2dp">
 
             <TextView
                 android:id="@+id/clicks"
