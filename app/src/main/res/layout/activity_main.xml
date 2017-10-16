@@ -45,7 +45,10 @@
         android:layout_gravity="bottom|end"
         android:layout_marginBottom="?attr/listPreferredItemHeightLarge"
         android:layout_marginRight="16dp"
-        app:backgroundTint="@android:color/holo_blue_bright"
+        android:tint="@android:color/transparent"
+        app:backgroundTint="@color/fab_color"
+        app:elevation="1dp"
+        app:rippleColor="@color/fab_color"
         app:srcCompat="@android:drawable/ic_menu_mapmode" />
 
     <RelativeLayout
