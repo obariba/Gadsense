@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':google-api-services-adsense-v1.4-rev325-1.23.0-javadoc'

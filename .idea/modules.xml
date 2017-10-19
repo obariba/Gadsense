@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Gadsense.iml" filepath="$PROJECT_DIR$/Gadsense.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/google-api-services-adsense-v1.4-rev325-1.23.0-javadoc/google-api-services-adsense-v1.4-rev325-1.23.0-javadoc.iml" filepath="$PROJECT_DIR$/google-api-services-adsense-v1.4-rev325-1.23.0-javadoc/google-api-services-adsense-v1.4-rev325-1.23.0-javadoc.iml" />
     </modules>
   </component>
 </project>
