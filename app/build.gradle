@@ -34,4 +34,7 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile project(':google-api-services-adsense-v1.4-rev325-1.23.0-javadoc')
     compile project(':google-api-client-android-1.22.0')
+    compile('com.google.apis:google-api-services-urlshortener:v1-rev40-1.20.0') {
+        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+    }
 }
