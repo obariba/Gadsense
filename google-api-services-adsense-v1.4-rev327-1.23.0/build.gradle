@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('google-api-services-adsense-v1.4-rev327-1.23.0.jar'))
