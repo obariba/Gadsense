@@ -37,4 +37,5 @@ dependencies {
     compile('com.google.apis:google-api-services-urlshortener:v1-rev40-1.20.0') {
         exclude group: 'org.apache.httpcomponents', module: 'httpclient'
     }
+    compile 'com.google.android.gms:play-services:11.4.2'
 }
