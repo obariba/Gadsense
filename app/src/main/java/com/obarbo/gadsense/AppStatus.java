@@ -1,0 +1,18 @@
+package com.obarbo.gadsense;
+
+/**
+ * Created by note on 2017/10/25.
+ */
+
+public enum AppStatus {
+    GETTING_ACCOUNT_ID,
+    FETCHING_INVENTORY,
+    SHOWING_INVENTORY,
+    FETCHING_METADATA,
+    SHOWING_CUSTOM_CONFIG,
+    FETCHING_REPORT,
+    SHOWING_REPORT,
+    FETCHING_SIMPLE_REPORT,
+    PICKING_ACCOUNT
+
+}

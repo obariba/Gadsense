@@ -21,6 +21,9 @@
     <string name="title_section3">this month</string>
     <string name="title_section4">last month</string>
     <string name="show_countries">Show Countries</string>
+    <string name="from">From</string>
+    <string name="status">Status: </string>
 
     <item name="action_account" type="id">account</item>
+
 </resources>
