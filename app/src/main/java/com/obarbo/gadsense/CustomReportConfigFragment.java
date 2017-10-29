@@ -32,7 +32,7 @@ public class CustomReportConfigFragment extends Fragment implements DimensionMet
         View rootView = inflater.inflate(R.layout.custom_report_comfig, container, false);
 
         TabHost host = (TabHost) rootView.findViewById(R.id.tabhost);
-        host,setup();
+        host.setup();
 
         TapSpec spec = host.newTabSpec("Dimensions");
         spec.setContent(R.id.dimensions_tab);
@@ -44,7 +44,7 @@ public class CustomReportConfigFragment extends Fragment implements DimensionMet
         spec.setIndicator("Metrics");
         host.addTab(spec);
 
-        spec = host.newTabSpec("Dates");
+        spec = host.ewTabSpec("Dates");
         spec.setContent(R.id.dates_tab);
         spec.setIndicator("Dates");
         host.addTab(spec);

@@ -20,7 +20,7 @@ import com.obarbo.gadsense.inventory.Inventory;
 
 public class DisplayInventoryFragment extends Fragment {
 
-    private class DisplayInventoryController;
+    private UiController displayInventoryController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup conta,

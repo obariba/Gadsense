@@ -14,6 +14,7 @@ import com.google.api.services.adsense.model.AdsenseReportsGenerateResponse;
 import com.google.api.services.adsense.model.ReportingMetadataEntry;
 import com.obarbo.gadsense.inventory.Inventory;
 
+
 import java.util.Collections;
 import java.util.List;
 
@@ -27,7 +28,7 @@ public class ApiController {
     private final AdSense adsenseService;
     private final GoogleAccountCredential credential;
     private final HttpTransport httpTransport = AndroidHttp.newCompatibleTransport();
-    private final GsonFactory jsonFactory = GsonFactory.getDefaultInstance();
+    //private final GsonFactory jsonFactory = GsonFactory.getDefaultInstance();
     private Activity activity;
     private List<ReportingMetadataEntry> dimensions;
     private List<ReportingMetadataEntry> metrics;
@@ -103,7 +104,7 @@ public class ApiController {
     }
 
     public void loadReport(String accountId, String fromDate, String toDate, List<String> dimensions, List<String> metrics) {
-        AsyncFetchReport,run((AsyncTaskController) activity, this, accountId, fromDate, toDate, dimensions, metrics);
+        AsyncFetchReport.run((AsyncTaskController) activity, this, accountId, fromDate, toDate, dimensions, metrics);
     }
 
     public List<ReportingMetadataEntry> getDimensions() {
@@ -131,6 +132,6 @@ public class ApiController {
     }
 
     public GoogleAccountCredential getCredential() {
-        return credential
+        return credential;
     }
 }

@@ -67,8 +67,7 @@ public class AsyncLoadInventory extends CommonAsyncTask {
             return;
         }
 
-        List<AdClient> adClients = apiController.getAdsenseService().accounts(),adclients()
-                .list(accountId).setMaxResults(10).execute().getItems();
+        List<AdClient> adClients = apiController.getAdsenseService().accounts().adclients().list(accountId).setMaxResults(10).execute().getItems();
 
         List<String> adClientIds = new ArrayList<String>();
         for (AdClient adClient : adClients) {

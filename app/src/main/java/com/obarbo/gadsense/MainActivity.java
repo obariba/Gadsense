@@ -320,7 +320,7 @@ public class MainActivity extends AppCompatActivity implements OAuthHelper.OnAut
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Select the Adsense account");
         builder.setSingleChoiceItems(itemArray, -1, null);
-        builder,setPositiveButton("Ok", new OnClickListener() {
+        builder.setPositiveButton("Ok", new OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -372,7 +372,7 @@ public class MainActivity extends AppCompatActivity implements OAuthHelper.OnAut
                 break;
             case FETCHING_INVENTORY:
                 showBlankFragment();
-                apiController,loadInventory(publisherAccountId);
+                apiController.loadInventory(publisherAccountId);
                 break;
             default:
                 showBlankFragment();
@@ -436,7 +436,7 @@ public class MainActivity extends AppCompatActivity implements OAuthHelper.OnAut
 
     private void createInventoryFragment() {
         DisplayInventoryFragment fragment = new DisplayInventoryFragment();
-        fragment,setUIController(this);
+        fragment.setUIController(this);
         fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
     }
 
