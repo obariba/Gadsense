@@ -8,8 +8,10 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TabHost;
+import android.widget.TabHost.TabSpec;
 
 import com.google.api.services.adsense.model.ReportingMetadataEntry;
+import com.obarbo.gadsense.reports.DimensionsMetricsCompatChecker;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,22 +31,22 @@ public class CustomReportConfigFragment extends Fragment implements DimensionMet
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View rootView = inflater.inflate(R.layout.custom_report_comfig, container, false);
+        View rootView = inflater.inflate(R.layout.custom_report_config, container, false);
 
         TabHost host = (TabHost) rootView.findViewById(R.id.tabhost);
         host.setup();
 
-        TapSpec spec = host.newTabSpec("Dimensions");
+        TabSpec spec = host.newTabSpec("Dimensions");
         spec.setContent(R.id.dimensions_tab);
         spec.setIndicator("Dimensions");
         host.addTab(spec);
 
         spec = host.newTabSpec("Metrics");
-        spec.setContent(R.id.matrics_tab);
+        spec.setContent(R.id.metrics_tab);
         spec.setIndicator("Metrics");
         host.addTab(spec);
 
-        spec = host.ewTabSpec("Dates");
+        spec = host.newTabSpec("Dates");
         spec.setContent(R.id.dates_tab);
         spec.setIndicator("Dates");
         host.addTab(spec);
@@ -55,7 +57,7 @@ public class CustomReportConfigFragment extends Fragment implements DimensionMet
         List<ReportingMetadataEntry> dimensions = customReportConfigReadyController.getDimensions();
         List<ReportingMetadataEntry> metrics = customReportConfigReadyController.getMetrics();
 
-        checker = new DimensionMetricsCompatChecker(metrics, dimensions);
+        checker = new DimensionsMetricsCompatChecker(metrics, dimensions);
 
         ArrayList<String> dimensionsIds = new ArrayList<String>();
 
@@ -70,7 +72,7 @@ public class CustomReportConfigFragment extends Fragment implements DimensionMet
         }
 
         dimensionsUI = new ArrayList<UiReportingItem>();
-        for (String dimension : dimensionIds) {
+        for (String dimension : dimensionsIds) {
             dimensionsUI.add(new UiReportingItem(dimension, false, true));
         }
 
@@ -110,9 +112,13 @@ public class CustomReportConfigFragment extends Fragment implements DimensionMet
             case R.id.generate_bt:
                 if (customReportConfigReadyController != null) {
                     customReportConfigReadyController.loadReport(
-                            computeCheckItems(dimensionsUI), computeCheckdItems(metricsUI));
+                            computeCheckedItems(dimensionsUI), computeCheckedItems(metricsUI));
                 }
                 break;
+            case R.id.from_bt:
+                if (customReportConfigReadyController != null) {
+                    customReportConfigReadyController.onDateBtClicked(v);
+                }
             case R.id.to_bt:
                 if (customReportConfigReadyController != null) {
                     customReportConfigReadyController.onDateBtClicked(v);
@@ -126,7 +132,7 @@ public class CustomReportConfigFragment extends Fragment implements DimensionMet
     public void onSelected(int position, boolean isMetric, boolean isChecked) {
 
         if (isMetric) {
-            metricsUI.get(position).serChecked(isChecked);
+            metricsUI.get(position).setChecked(isChecked);
 
             List<String> checkedMetrics = computeCheckedItems(metricsUI);
 
@@ -148,14 +154,14 @@ public class CustomReportConfigFragment extends Fragment implements DimensionMet
                 dimension.setEnabled(isCompatible);
             }
 
-            for (UiRepotingItem metric : metricsUI) {
+            for (UiReportingItem metric : metricsUI) {
                 boolean isCompatible = checker.isMetricCompatibleWithDimensions(
                         metric.getId(), checkedDimensions);
                 metric.setEnabled(isCompatible);
             }
 
             dimensionAdapter.notifyDataSetChanged();
-            metricAdapter.notifyDayaSetChanged();
+            metricAdapter.notifyDataSetChanged();
         }
     }
 

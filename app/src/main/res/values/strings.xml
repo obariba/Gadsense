@@ -4,6 +4,7 @@
     <string name="action_help">Help</string>
     <string name="action_refresh">Refresh</string>
     <string name="action_account">Accounts</string>
+    <string name="menu_account">Accounts</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="earnings">Earnings</string>
     <string name="page_views">Page View</string>
@@ -23,6 +24,10 @@
     <string name="show_countries">Show Countries</string>
     <string name="from">From</string>
     <string name="status">Status: </string>
+    <string name="to">To</string>
+    <string name="generate">Generate</string>
+    <string name="error">Error</string>
+    <string name="error_format">[Error] %s</string>
 
     <item name="action_account" type="id">account</item>
 

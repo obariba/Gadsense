@@ -28,7 +28,7 @@ public class ApiController {
     private final AdSense adsenseService;
     private final GoogleAccountCredential credential;
     private final HttpTransport httpTransport = AndroidHttp.newCompatibleTransport();
-    //private final GsonFactory jsonFactory = GsonFactory.getDefaultInstance();
+    private final GsonFactory jsonFactory = GsonFactory.getDefaultInstance();
     private Activity activity;
     private List<ReportingMetadataEntry> dimensions;
     private List<ReportingMetadataEntry> metrics;
@@ -44,8 +44,7 @@ public class ApiController {
         SharedPreferences settings = activity.getPreferences(Context.MODE_PRIVATE);
         credential.setSelectedAccountName(settings.getString(PREF_ACCOUNT_NAME, null));
 
-        adsenseService = new AdSense.Builder(httpTransport, jsonFactory, credential)
-                .setApplicationName("AdSense Quickstart for Android").build();
+        adsenseService = new AdSense.Builder(httpTransport, jsonFactory, credential).setApplicationName("Gadsense").build();
 
     }
     public static ApiController getApiController(Activity activity) {

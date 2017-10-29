@@ -4,6 +4,7 @@ import android.accounts.AccountManager;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -211,8 +212,8 @@ public class MainActivity extends AppCompatActivity implements OAuthHelper.OnAut
     }
 
     @Override
-    public void onResoreinstanceState(Bundle saveInstanceState) {
-        super.onRestoreInstanceState(saveInstanceState);
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
         if (savedInstanceState.containsKey("publisherAccountId")) {
         }
     }
@@ -312,14 +313,14 @@ public class MainActivity extends AppCompatActivity implements OAuthHelper.OnAut
 
     private void pickPublisherAccount() {
         final List<CharSequence> items = new ArrayList<CharSequence>();
-        for (Account account : apiC.getAccounts()) {
+        for (Account account : apiController.getAccounts()) {
             items.add(account.getName());
         }
-        CharSequence[] itemArray = items.toArray(new CharSequence[items.size()]);
+        CharSequence[] itemsArray = items.toArray(new CharSequence[items.size()]);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Select the Adsense account");
-        builder.setSingleChoiceItems(itemArray, -1, null);
+        builder.setSingleChoiceItems(itemsArray, -1, null);
         builder.setPositiveButton("Ok", new OnClickListener() {
 
             @Override
@@ -401,7 +402,7 @@ public class MainActivity extends AppCompatActivity implements OAuthHelper.OnAut
     }
 
     private void haveGooglePlayServices() {
-        if (apiController.getCredential().getSelectAccountName() == null) {
+        if (apiController.getCredential().getSelectedAccountName() == null) {
             chooseDeviceAccount();
         } else {
             refreshView();

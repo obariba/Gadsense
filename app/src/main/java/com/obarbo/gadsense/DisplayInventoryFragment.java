@@ -1,12 +1,12 @@
 package com.obarbo.gadsense;
 
-import android.app.ActionBar;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -36,20 +36,20 @@ public class DisplayInventoryFragment extends Fragment {
         Inventory inventory = displayInventoryController.getInventory();
 
         TableLayout.LayoutParams tableRowParams = new TableLayout.LayoutParams(
-                LayoutParams.MATCH_PARNET, LayoutParams.WRAP_CONTENT);
+                LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         tableRowParams.setMargins(1, 1, 1, 1);
 
-        TableRow.LayoutParams accountLayoutParams = new TableLayout.LayoutParams(
-                LayoutParams.MATCH_PARENT, LayoutParamas.WRAP_CONTENT);
+        TableRow.LayoutParams accountLayoutParams = new TableRow.LayoutParams(
+                LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         accountLayoutParams.setMargins(2, 1, 2, 1);
 
-        TableRow.LayoutParams adCLientLayoutParams = new TabletRow.LayoutParams(
+        TableRow.LayoutParams adCLientLayoutParams = new TableRow.LayoutParams(
                 LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         adCLientLayoutParams.setMargins(12, 1, 2, 1);
 
         TableRow.LayoutParams adUnitChannelLayoutParams = new TableRow.LayoutParams(
                 LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-        adUnitChannelLayoutParams.setMargins(21, 1, 2, 1);
+        adUnitChannelLayoutParams.setMargins(24, 1, 2, 1);
 
         for (String accountId : inventory.getmAccounts()) {
             TableRow trow = new TableRow(getActivity());

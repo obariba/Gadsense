@@ -31,7 +31,7 @@ public class AsyncFetchReport extends CommonAsyncTask {
     @Override
     protected void doInBackground() throws IOException {
         apiController.onReportFetched(
-                apiController.getAdsenseService().accounts().reports().generete(accountId, fromDate, toDate)
+                apiController.getAdsenseService().accounts().reports().generate(accountId, fromDate, toDate)
                 .setDimension(dimensions)
                 .setMetric(metrics)
                 .execute());

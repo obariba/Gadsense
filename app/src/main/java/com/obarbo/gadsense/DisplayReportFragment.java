@@ -52,7 +52,7 @@ public class DisplayReportFragment extends Fragment {
 
         for (Headers header : headers) {
             TextView tv = new TextView(getActivity());
-            tv.setText(header.getName());
+            tv.setText(header.getname());
             tr.setLayoutParams(tabletRowParams);
             tr.addView(tv);
         }

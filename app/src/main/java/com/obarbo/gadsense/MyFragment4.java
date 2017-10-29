@@ -13,7 +13,7 @@ public class MyFragment4 extends Fragment {
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.page4, container, false);
+        View rootView = inflater.inflate(R.layout.custom_report_config, container, false);
         //TextView dummyTextView = (TextView) rootView.findViewById(R.id.section_label);
         //dummyTextView.setText("1");
         return rootView;

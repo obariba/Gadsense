@@ -1,6 +1,7 @@
 package com.obarbo.gadsense.reports;
 
-import com.google.api.client.util.NullValue;
+import android.support.annotation.Nullable;
+
 import com.google.api.services.adsense.model.ReportingMetadataEntry;
 
 import java.io.Serializable;

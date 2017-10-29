@@ -31,8 +31,8 @@ public class AsyncLoadInventory extends CommonAsyncTask {
     @Override
     protected void doInBackground() throws IOException {
         inventory = new Inventory();
-        List<String> accountId = new ArrayList<String>();
-        accountId.add(rootAccountId);
+        List<String> accountIds = new ArrayList<String>();
+        accountIds.add(rootAccountId);
         processAccount(rootAccountId);
 
         //Sub accounts:
@@ -77,14 +77,14 @@ public class AsyncLoadInventory extends CommonAsyncTask {
                     .list(accountId, adClient.getId()).setMaxResults(10).execute().getItems();
             List<String> adUnitNames = new ArrayList<String>();
             if (adUnits != null) {
-            for (AdUnits adUnit : adUnits) {
-                adUnitNames.add(adUnits.getName());
+            for (AdUnit adUnit : adUnits) {
+                adUnitNames.add(adUnit.getName());
             }
         }
-        inventory.setAdUnits(adclients.getId(), adUnitNames);
+        inventory.setAdUnits(adClient.getId(), adUnitNames);
 
         List<CustomChannel> customChannels = apiController.getAdsenseService().accounts()
-                .customcannels().list(accountId, adClient.getId()).setMaxReesults(10).execute()
+                .customchannels().list(accountId, adClient.getId()).setMaxResults(10).execute()
                 .getItems();
         List<String> customChannelNames = new ArrayList<String>();
         if (customChannels != null) {
@@ -92,7 +92,7 @@ public class AsyncLoadInventory extends CommonAsyncTask {
                 customChannelNames.add(customChannel.getName());
             }
         }
-        inventory.setCusomChannels(adclients.getId(), customChannelNames);
+        inventory.setCusomChannels(adClient.getId(), customChannelNames);
     }
     inventory.setAdClients(accountId, adClientIds);
     }

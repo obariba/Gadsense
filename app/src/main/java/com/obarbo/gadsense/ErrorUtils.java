@@ -1,13 +1,13 @@
 package com.obarbo.gadsense;
 
 import android.app.Activity;
+import android.content.res.Resources;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.GoogleAuthException;
 import com.google.api.client.googleapis.json.GoogleJsonError;
 import com.google.api.client.googleapis.json.GoogleJsonResponseException;
-import com.google.common.io.Resources;
 
 /**
  * Created by note on 2017/10/26.
