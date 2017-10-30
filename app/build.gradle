@@ -43,6 +43,12 @@ dependencies {
         compile group: 'com.google.api-client', name: 'google-api-client', version: '1.22.0'
         compile 'com.google.apis:google-api-services-webmasters:v3-rev22-1.22.0'
     }
+    compile ('com.google.api-client:google-api-client-android:1.17.0-rc') {
+        exclude module: 'httpclient'
+    }
+    compile ('com.google.http-client:google-http-client-gson:1.17.0-rc') {
+        exclude module: 'httpclient'
+    }
 
 
 }

@@ -1,19 +1,17 @@
 package com.obarbo.gadsense;
 
-import android.app.ActionBar;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import com.google.android.gms.vision.text.Text;
-import com.google.api.client.json.webtoken.JsonWebSignature;
 import com.google.api.services.adsense.model.AdsenseReportsGenerateResponse;
 
 import java.util.List;
@@ -46,13 +44,13 @@ public class DisplayReportFragment extends Fragment {
                 LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         tvParams.setMargins(10, 10, 10, 10);
 
-        List<Headers> headers = response.getHeaders();
+        List<AdsenseReportsGenerateResponse.Headers> headers = response.getHeaders();
         TableRow tr = new TableRow(getActivity());
         tl.addView(tr);
 
-        for (Headers header : headers) {
+        for (AdsenseReportsGenerateResponse.Headers header : headers) {
             TextView tv = new TextView(getActivity());
-            tv.setText(header.getname());
+            tv.setText(header.getName());
             tr.setLayoutParams(tabletRowParams);
             tr.addView(tv);
         }

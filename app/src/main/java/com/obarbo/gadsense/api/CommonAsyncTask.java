@@ -1,14 +1,12 @@
 package com.obarbo.gadsense.api;
 
+import android.app.Activity;
 import android.os.AsyncTask;
 
-import com.google.android.gms.auth.GooglePlayServicesAvailabilityException;
-import com.google.android.gms.instantapps.ActivityCompat;
 import com.google.api.client.googleapis.extensions.android.gms.auth.UserRecoverableAuthIOException;
 import com.obarbo.gadsense.AppStatus;
 import com.obarbo.gadsense.ErrorUtils;
-import android.app.Activity;
-import android.os.AsyncTask;
+
 import java.io.IOException;
 
 /**
@@ -51,9 +49,6 @@ abstract class CommonAsyncTask extends AsyncTask<Void, Void, Boolean> {
         try {
             doInBackground();
             return true;
-        } catch (final GooglePlayServicesAvailabilityException availabilityException) {
-            activity.showGooglePlayServicesAvailabilityErrorDialog(
-                    availabilityException.getConnectionStatusCode());
         } catch (UserRecoverableAuthIOException userRecoverableException) {
             activity.handleRecoverableError(userRecoverableException);
         } catch (IOException e) {

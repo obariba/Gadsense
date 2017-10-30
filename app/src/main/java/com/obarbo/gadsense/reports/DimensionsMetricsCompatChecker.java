@@ -44,7 +44,7 @@ public class DimensionsMetricsCompatChecker implements Serializable {
         if (entryMetric == null) {
             return false;
         }
-        return isMetricCompatibleWithDimensions(entryMetric, dimensions);
+        return isMetricCompatibleDimensions(entryMetric, dimensions);
     }
 
     public boolean areMetricsCompatible(List<String> metrics) {

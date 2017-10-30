@@ -7,13 +7,13 @@ import android.content.SharedPreferences;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;
 import com.google.api.client.http.HttpTransport;
+import com.google.api.client.json.gson.GsonFactory;
 import com.google.api.services.adsense.AdSense;
 import com.google.api.services.adsense.AdSenseScopes;
 import com.google.api.services.adsense.model.Account;
 import com.google.api.services.adsense.model.AdsenseReportsGenerateResponse;
 import com.google.api.services.adsense.model.ReportingMetadataEntry;
 import com.obarbo.gadsense.inventory.Inventory;
-
 
 import java.util.Collections;
 import java.util.List;
@@ -29,6 +29,8 @@ public class ApiController {
     private final GoogleAccountCredential credential;
     private final HttpTransport httpTransport = AndroidHttp.newCompatibleTransport();
     private final GsonFactory jsonFactory = GsonFactory.getDefaultInstance();
+
+    //private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
     private Activity activity;
     private List<ReportingMetadataEntry> dimensions;
     private List<ReportingMetadataEntry> metrics;

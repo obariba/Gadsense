@@ -1,12 +1,12 @@
 package com.obarbo.gadsense;
 
 import android.accounts.AccountManager;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -33,6 +33,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.api.client.googleapis.extensions.android.gms.auth.UserRecoverableAuthIOException;
+import com.google.api.services.adsense.model.Account;
 import com.google.api.services.adsense.model.AdsenseReportsGenerateResponse;
 import com.google.api.services.adsense.model.ReportingMetadataEntry;
 import com.google.api.services.urlshortener.UrlshortenerScopes;
@@ -40,20 +41,10 @@ import com.obarbo.gadsense.api.ApiController;
 import com.obarbo.gadsense.api.AsyncTaskController;
 import com.obarbo.gadsense.inventory.Inventory;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements OAuthHelper.OnAuthListener,
+public abstract class MainActivity extends AppCompatActivity implements OAuthHelper.OnAuthListener,
         ActionBar.OnNavigationListener,UiController, AsyncTaskController {
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final int REQUEST_GOOGLE_PLAY_SERVICES = 0;
@@ -178,7 +169,7 @@ public class MainActivity extends AppCompatActivity implements OAuthHelper.OnAut
         return apiController.getReportResponse();
     }
 
-    @Override
+    //@Override
     public void setToDate(int year, int month, int day, boolean isFrom) {
         if (isFrom) {
             fromDate = String .format("%d-%02d-%02d", year, month + 1, day);
@@ -193,7 +184,7 @@ public class MainActivity extends AppCompatActivity implements OAuthHelper.OnAut
         refreshView();
     }
 
-    @Override
+    //@Override
     public boolean onCreatOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
@@ -256,6 +247,7 @@ public class MainActivity extends AppCompatActivity implements OAuthHelper.OnAut
             default:
                 break;
         }
+        mHelper.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
@@ -267,6 +259,7 @@ public class MainActivity extends AppCompatActivity implements OAuthHelper.OnAut
 
 
 
+    @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -297,14 +290,14 @@ public class MainActivity extends AppCompatActivity implements OAuthHelper.OnAut
             }
         });
 
-        final ActionBar actionBar = getActionBar();
+        final android.app.ActionBar actionBar = getActionBar();
         actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
 
         actionBar.setListNavigationCallbacks(
                 new ArrayAdapter<String>(actionBar.getThemedContext(), android.R.layout.simple_list_item_1,
                         android.R.id.text1, new String[]{getString(R.string.title_section1),
-                        getString(R.string.title_section2), getString(R.string.title_section3)}), this);
+                        getString(R.string.title_section2), getString(R.string.title_section3)}), (android.app.ActionBar.OnNavigationListener) this);
 
                 AdView mAdView = (AdView) findViewById(R.id.adView);
                 AdRequest adRequest = new AdRequest.Builder().build();
@@ -444,19 +437,19 @@ public class MainActivity extends AppCompatActivity implements OAuthHelper.OnAut
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
-    @Override
+ /*   @Override
     protected void onActivityResult(int requesyCode, int resultCode, Intent data) {
         super.onActivityResult(requesyCode, resultCode, data);
         // アカウント選択や認証画面から返ってきた時の処理をOAuthHelperで受け取る
 
         mHelper.onActivityResult(requesyCode, resultCode, data);
     }
-
-    @Override
+*/
+/*    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -478,7 +471,7 @@ public class MainActivity extends AppCompatActivity implements OAuthHelper.OnAut
 
         return super.onOptionsItemSelected(item);
     }
-
+*/
  /*   @Override
     public void getAuthToken(final String authToken) {
 

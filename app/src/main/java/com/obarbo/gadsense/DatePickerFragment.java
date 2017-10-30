@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.icu.util.Calendar;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.widget.DatePicker;
 
 /**
@@ -39,4 +40,6 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
         this.callback = callback;
     }
 
+    public void show(FragmentManager supportFragmentManager, String datePickerTag) {
+    }
 }
